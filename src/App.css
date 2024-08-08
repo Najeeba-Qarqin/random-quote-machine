@@ -76,7 +76,7 @@ a {
 #tweet-quote,
 #tumblr-quote {
   float: left;
-  padding: 0px;
+  padding: 0;
   padding-top: 6px;
   text-align: center;
   font-size: 1.4em;
@@ -107,6 +107,10 @@ a {
 
 @media (min-width: 1000px) {
   #quote-box {
-    width: 40vw;
+    width: 45vw;
+  }
+
+  .quote-text {
+    font-size: 2em;
   }
 }
