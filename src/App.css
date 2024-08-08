@@ -34,7 +34,7 @@ a {
   text-align: left;
   background-color: #444;
   border-radius: 10px;
-  box-shadow: 5px 5px 30px black;
+  box-shadow: 8px 8px 30px black;
 }
 
 .quote-author {
@@ -92,7 +92,7 @@ a {
 #tumblr-quote:hover {
   color: goldenrod;
   background-color: #444;
-  box-shadow: 1px 1px 10px black;
+  box-shadow: 3px 3px 10px black;
 }
 
 #new-quote {
