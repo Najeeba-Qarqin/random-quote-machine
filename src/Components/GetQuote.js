@@ -8,7 +8,7 @@ class GetQuote extends React.Component {
       text: "",
       author: "",
       url: "",
-      tumblr: 'https://www.tumblr.com/widgets/share/tool?posttype=quote&tags=quotes,freecodecamp&caption='
+      tumblr: '',
     };
     this.quote = this.quote.bind(this);
   }
@@ -29,7 +29,8 @@ class GetQuote extends React.Component {
         this.setState({
           text: item.text,
           author: item.author,
-          url: "https://twitter.com/intent/tweet?text=" + item.text + " - " + item.author
+          url: "https://twitter.com/intent/tweet?text=" + item.text + " - " + item.author,
+          tumblr: 'https://www.tumblr.com/widgets/share/tool?posttype=quote&tags=quotes,freecodecamp&caption=' + item.text + " - " + item.author,
         });
       })
       .catch(error => console.log(error));
@@ -37,6 +38,7 @@ class GetQuote extends React.Component {
   render() {
     return (
       <div id="wrapper">
+        <h2>Randome Quote Machine</h2><br/>
         <div id="quote-box">
           <div className="quote-text">
             <FaQuoteLeft /> <span id="text">{this.state.text}</span><FaQuoteRight />
@@ -45,15 +47,16 @@ class GetQuote extends React.Component {
             - <span id="author">{this.state.author}</span>
           </div>
           <div className="buttons">
-          <a className="button" id="tweet-quote" title="Tweet this quote!" target="_blank" rel="noopener noreferrer" href={this.state.url}>
-            <FaTwitter />
-          </a>
-          <a className="button" id="tweet-quote" title="Post this quote on tumblr!" target="_blank" rel="noopener noreferrer" href={this.state.tumblr}>
-            <FaTumblr />
-          </a>
-          <button className="button" id="new-quote" onClick={this.quote}>New quote</button>
+            <a className="button" id="tweet-quote" title="Tweet this quote!" target="_blank" rel="noopener noreferrer" href={this.state.url}>
+              <FaTwitter />
+            </a>
+            <a className="button" id="tumblr-quote" title="Post this quote on tumblr!" target="_blank" rel="noopener noreferrer" href={this.state.tumblr}>
+              <FaTumblr />
+            </a>
+            <button className="button" id="new-quote" onClick={this.quote}>New quote</button>
+          </div>
         </div>
-        </div>
+            <a target="_blank" rel="noopener noreferrer" href=''>by najeeba</a>
       </div>
     );
   }

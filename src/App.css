@@ -1,3 +1,5 @@
+@import url(https://fonts.googleapis.com/css2?family=Lora:ital,wght@1,600&display=swap);
+
 * {
   margin: 0;
   padding: 0;
@@ -5,22 +7,30 @@
 }
 
 .App {
+  font-family: "Lora", serif;
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
   width: 100vw;
   background-color: goldenrod;
-  box-shadow: inset 0 0 90px black;
+}
+
+h2,
+a {
+  text-align: center;
+  font-family: sans-serif;
+  color: #444;
 }
 
 #quote-box {
-  width: 500px;
+  width: 80vw;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding: 2rem;  color: goldenrod;
+  padding: 2rem;
+  color: goldenrod;
   text-align: left;
   background-color: #444;
   border-radius: 10px;
@@ -28,8 +38,7 @@
 }
 
 .quote-author {
-  width: 450px;
-  height: auto;
+  width: 100%;
   clear: both;
   padding-top: 20px;
   font-size: 0.9em;
@@ -38,14 +47,13 @@
 
 .quote-text {
   text-align: left;
-  width: 450px;
-  height: auto;
+  width: 100%;
   font-weight: 500;
-  font-size: 1.5em;
+  font-size: 1.3em;
 }
 
 .buttons {
-  width: 450px;
+  width: 100%;
   margin: auto;
   display: block;
 }
@@ -62,28 +70,43 @@
   margin-top: 30px;
   opacity: 1;
   cursor: pointer;
-  transition: 0.6s ease-in;
+  transition: 0.4s ease-in;
 }
 
-#tweet-quote {
+#tweet-quote,
+#tumblr-quote {
   float: left;
   padding: 0px;
-  padding-top: 5px;
+  padding-top: 6px;
   text-align: center;
   font-size: 1.4em;
   color: #444;
   margin-right: 5px;
   height: 35px;
   width: 40px;
-  transition: 0.6s ease-in;
+  transition: 0.4s ease-in;
 }
 
 .button:hover,
-#tweet-quote:hover {
+#tweet-quote:hover,
+#tumblr-quote:hover {
   color: goldenrod;
   background-color: #444;
+  box-shadow: 1px 1px 10px black;
 }
 
 #new-quote {
   float: right;
+}
+
+@media (min-width: 700px) {
+  #quote-box {
+    width: 56vw;
+  }
+}
+
+@media (min-width: 1000px) {
+  #quote-box {
+    width: 40vw;
+  }
 }
