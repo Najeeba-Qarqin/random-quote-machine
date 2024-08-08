@@ -39,6 +39,9 @@ class GetQuote extends React.Component {
         <div id="quote-box">
           <div className="quote-text">
             <FaQuoteLeft /> <span id="text">{this.state.text}</span><FaQuoteRight />
+            <div className="quote-author">
+              - <span id="author">{this.state.author}</span>
+            </div>
           </div>
         </div>
       </div>
