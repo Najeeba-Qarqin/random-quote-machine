@@ -1,5 +1,5 @@
 import React from "react";
-import { FaTwitter, FaQuoteLeft, FaQuoteRight } from "react-icons/fa";
+import { FaTwitter, FaQuoteLeft, FaQuoteRight, FaTumblr } from "react-icons/fa";
 
 class GetQuote extends React.Component {
   constructor(props) {
@@ -8,6 +8,7 @@ class GetQuote extends React.Component {
       text: "",
       author: "",
       url: "",
+      tumblr: 'https://www.tumblr.com/widgets/share/tool?posttype=quote&tags=quotes,freecodecamp&caption='
     };
     this.quote = this.quote.bind(this);
   }
@@ -46,6 +47,9 @@ class GetQuote extends React.Component {
           <div className="buttons">
           <a className="button" id="tweet-quote" title="Tweet this quote!" target="_blank" rel="noopener noreferrer" href={this.state.url}>
             <FaTwitter />
+          </a>
+          <a className="button" id="tweet-quote" title="Post this quote on tumblr!" target="_blank" rel="noopener noreferrer" href={this.state.tumblr}>
+            <FaTumblr />
           </a>
           <button className="button" id="new-quote" onClick={this.quote}>New quote</button>
         </div>
