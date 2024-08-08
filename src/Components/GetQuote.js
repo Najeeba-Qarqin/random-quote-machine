@@ -9,6 +9,15 @@ class GetQuote extends React.Component {
       url: ""
     };
   }
+  componentDidMount() {
+    this.mounted = true; 
+    if (this.mounted) {
+      this.quote();
+    }
+  }
+  componentWillUnmount() {
+    this.mounted = false;
+  }
   quote() {
     fetch("https://type.fit/api/quotes")
       .then(response => response.json())
