@@ -1,4 +1,5 @@
 import React from "react";
+import { FaTwitter, FaQuoteLeft, FaQuoteRight } from "react-icons/fa";
 
 class GetQuote extends React.Component {
   constructor(props) {
@@ -36,6 +37,9 @@ class GetQuote extends React.Component {
     return (
       <div id="wrapper">
         <div id="quote-box">
+          <div className="quote-text">
+            <FaQuoteLeft /> <span id="text">{this.state.text}</span><FaQuoteRight />
+          </div>
         </div>
       </div>
     );
