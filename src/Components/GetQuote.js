@@ -6,11 +6,12 @@ class GetQuote extends React.Component {
     this.state = {
       text: "",
       author: "",
-      url: ""
+      url: "",
     };
+    this.quote = this.quote.bind(this);
   }
   componentDidMount() {
-    this.mounted = true; 
+    this.mounted = true;
     if (this.mounted) {
       this.quote();
     }
@@ -31,6 +32,14 @@ class GetQuote extends React.Component {
       })
       .catch(error => console.log(error));
   }
-}
+  render() {
+    return (
+      <div id="wrapper">
+        <div id="quote-box">
+        </div>
+      </div>
+    );
+  }
+};
 
 export default GetQuote;
