@@ -1,5 +1,8 @@
 import React from 'react';
-import {  FaTwitter, FaQuoteLeft, FaTumblr } from 'react-icons/fa';
+import {
+  FaTwitter, FaQuoteLeft, FaTumblr
+}
+  from 'react-icons/fa';
 
 class GetQuote extends React.Component {
   constructor(props) {
@@ -22,13 +25,13 @@ class GetQuote extends React.Component {
 
   componentWillUnmount() {
     this.mounted = false;
-  };
+  }
 
   quote() {
     fetch('https://type.fit/api/quotes')
-      .then(response => response.json())
+      .then((response) => response.json())
       .then((data) => {
-        var item = data[Math.floor(Math.random() * data.length)];
+        let item = data[Math.floor(Math.random() * data.length)];
         this.setState({
           text: item.text,
           author: item.author,
@@ -41,28 +44,24 @@ class GetQuote extends React.Component {
 
   render() {
     return (
-      <div id='wrapper'>
+      <div id="wrapper">
         <h2>Randome Quote Machine</h2>
         <br />
-        <div id='quote-box'>
-          <div className='quote-text'>
-            <FaQuoteLeft /> 
-            <span id='text'>{this.state.text}</span>
+        <div id="quote-box">
+          <div className="quote-text">
+            <FaQuoteLeft />
+            <span id="text">{this.state.text}</span>
           </div>
-          <div className='quote-author'>
-            - <span id='author'>{this.state.author}</span>
+          <div className="quote-author"> - 
+            <span id="author">{this.state.author}</span>
           </div>
-          <div className='buttons'>
-            <a className='button' id='tweet-quote' title='Tweet this quote!' target='_blank' rel='noopener noreferrer' href={this.state.url}>
-              <FaTwitter />
-            </a>
-            <a className='button' id='tumblr-quote' title='Post this quote on tumblr!' target='_blank' rel='noopener noreferrer' href={this.state.tumblr}>
-              <FaTumblr />
-            </a>
+          <div className="buttons">
+            <a className="button" id="tweet-quote" title="Tweet this quote!" target="_blank" rel="noopener noreferrer" href={this.state.url}><FaTwitter /></a>
+            <a className="button" id="tumblr-quote" title="Post this quote on tumblr!" target="_blank" rel="noopener noreferrer" href={this.state.tumblr}><FaTumblr /></a>
             <button className='button' id='new-quote' type='button' onClick={this.quote}>New quote</button>
           </div>
         </div>
-        <a target='_blank' rel='noopener noreferrer' href='https://najeeba-qarqin.github.io/Portfolio-JS/'>by najeeba</a>
+        <a target="_blank" rel="noopener noreferrer" href="https://najeeba-qarqin.github.io/Portfolio-JS/">by najeeba</a>
       </div>
     );
   }
