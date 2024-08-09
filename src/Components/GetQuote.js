@@ -44,7 +44,7 @@ class GetQuote extends React.Component {
 
   render() {
     const {
-      quote, author, url, tumblr
+      quote, author, url, tumblr,
     } = this.state;
     return (
       <div id="wrapper">
@@ -60,12 +60,12 @@ class GetQuote extends React.Component {
             <span id="author">{author}</span>
           </div>
           <div className="buttons">
-            <i><a className="button" id="tweet-quote" title="Tweet this quote!" target="_blank" rel="noopener noreferrer" href={url}>
-              <FaTwitter />
-            </a></i>
-            <i><a className="button" id="tumblr-quote" title="Post this quote on tumblr!" target="_blank" rel="noopener noreferrer" href={tumblr}>
-              <FaTumblr />
-            </a></i>
+            <a className="button" id="tweet-quote" title="Tweet this quote!" target="_blank" rel="noopener noreferrer" href={url}>
+              <i><FaTwitter></FaTwitter></i>
+            </a>
+            <a className="button" id="tumblr-quote" title="Post this quote on tumblr!" target="_blank" rel="noopener noreferrer" href={tumblr}>
+              <i><FaTumblr></FaTumblr></i>
+            </a>
             <button className="button" id="new-quote" type="button" onClick={this.quote}>New quote</button>
           </div>
         </div>
