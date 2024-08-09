@@ -35,8 +35,8 @@ class GetQuote extends React.Component {
         this.setState({
           quote: item.quote,
           author: item.author,
-          url: `https://x.com/intent/post?hashtags=quotes&related=freecodecamp&text=%22I+am+not+a+product+of+my+circumstances.+I+am+a+product+of+my+decisions.%22+Stephen+Covey ${item.quote}  -  ${item.author}`,
-          tumblr: `https://www.tumblr.com/login?redirect_to=https%3A%2F%2Fwww.tumblr.com%2Fwidgets%2Fshare%2Ftool%3Fposttype%3Dquote%26tags%3Dquotes%252Cfreecodecamp%26caption%3DStephen%2BCovey%26content%3DI%2Bam%2Bnot%2Ba%2Bproduct%2Bof%2Bmy%2Bcircumstances.%2BI%2Bam%2Ba%2Bproduct%2Bof%2Bmy%2Bdecisions.%26canonicalUrl%3Dhttps%253A%252F%252Fwww.tumblr.com%252Fbuttons%26shareSource%3Dtumblr_share_button ${item.quote}  -  ${item.author}`,
+          url: `https://twitter.com/intent/tweet?hashtags=quotes&related=freecodecamp&text=%22I%20am%20not%20a%20product%20of%20my%20circumstances.%20I%20am%20a%20product%20of%20my%20decisions.%22%20Stephen%20Covey ${item.quote}  -  ${item.author}`,
+          tumblr: `https://www.tumblr.com/widgets/share/tool?posttype=quote&tags=quotes,freecodecamp&caption=Stephen%20Covey&content=I%20am%20not%20a%20product%20of%20my%20circumstances.%20I%20am%20a%20product%20of%20my%20decisions.&canonicalUrl=https%3A%2F%2Fwww.tumblr.com%2Fbuttons&shareSource=tumblr_share_button ${item.quote}  -  ${item.author}`,
         });
       })
       .catch((error) => console.log(error));
