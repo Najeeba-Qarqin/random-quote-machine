@@ -45,11 +45,10 @@ a {
   text-align: right;
 }
 
-.quote-text {
+#text {
   text-align: left;
   width: 100%;
-  font-weight: 500;
-  font-size: 1.3em;
+  font-size: 1.2em;
 }
 
 .buttons {
@@ -111,6 +110,6 @@ a {
   }
 
   .quote-text {
-    font-size: 2em;
+    font-size: 1.5em;
   }
 }
