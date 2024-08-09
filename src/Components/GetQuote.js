@@ -60,16 +60,13 @@ class GetQuote extends React.Component {
             <span id="author">{author}</span>
           </div>
           <div className="buttons">
-            <label>
-            <a className="button" id="tweet-quote" title="Tweet this quote!" target="_blank" rel="noopener noreferrer" href={url}>
+            <a
+             className="button" id="tweet-quote" aria-label="Tweet this quote!" target="_blank" rel="noopener noreferrer" href={url}>
               <i><FaTwitter /></i>
             </a>
-            </label>
-            <label>
-            <a className="button" id="tumblr-quote" title="Post this quote on tumblr!" target="_blank" rel="noopener noreferrer" href={tumblr}>
+            <a className="button" id="tumblr-quote" aria-label="Post this quote on tumblr!" target="_blank" rel="noopener noreferrer" href={tumblr}>
               <i><FaTumblr /></i>
             </a>
-            </label>
             <button className="button" id="new-quote" type="button" onClick={this.quote}>New quote</button>
           </div>
         </div>
