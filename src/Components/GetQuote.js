@@ -43,7 +43,9 @@ class GetQuote extends React.Component {
   }
 
   render() {
-    const { quote, author, url, tumblr } = this.state;
+    const {
+      quote, author, url, tumblr
+    } = this.state;
     return (
       <div id="wrapper">
         <h2>Randome Quote Machine</h2>
@@ -58,12 +60,12 @@ class GetQuote extends React.Component {
             <span id="author">{author}</span>
           </div>
           <div className="buttons">
-            <a className="button" id="tweet-quote" title="Tweet this quote!" target="_blank" rel="noopener noreferrer" href={url}>
-              <i><FaTwitter /></i>
-            </a>
-            <a className="button" id="tumblr-quote" title="Post this quote on tumblr!" target="_blank" rel="noopener noreferrer" href={tumblr}>
-              <i><FaTumblr /></i>
-            </a>
+            <i><a className="button" id="tweet-quote" title="Tweet this quote!" target="_blank" rel="noopener noreferrer" href={url}>
+              <FaTwitter />
+            </a></i>
+            <i><a className="button" id="tumblr-quote" title="Post this quote on tumblr!" target="_blank" rel="noopener noreferrer" href={tumblr}>
+              <FaTumblr />
+            </a></i>
             <button className="button" id="new-quote" type="button" onClick={this.quote}>New quote</button>
           </div>
         </div>
