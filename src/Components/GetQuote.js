@@ -50,7 +50,7 @@ class GetQuote extends React.Component {
         <br />
         <div id="quote-box">
           <div className="quote-text">
-            <label><FaQuoteLeft /></label>
+            <i><FaQuoteLeft /></i>
             <span id="text">{quote}</span>
           </div>
           <div className="quote-author">
@@ -59,10 +59,10 @@ class GetQuote extends React.Component {
           </div>
           <div className="buttons">
             <a className="button" id="tweet-quote" title="Tweet this quote!" target="_blank" rel="noopener noreferrer" href={url}>
-              <label><FaTwitter /></label>
+              <i><FaTwitter /></i>
             </a>
             <a className="button" id="tumblr-quote" title="Post this quote on tumblr!" target="_blank" rel="noopener noreferrer" href={tumblr}>
-              <label><FaTumblr /></label>
+              <i><FaTumblr /></i>
             </a>
             <button className="button" id="new-quote" type="button" onClick={this.quote}>New quote</button>
           </div>
