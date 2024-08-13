@@ -14,7 +14,7 @@
 
 ### Live Link
 
-[The_live_link_of_this_project](https://najeeba-qarqin.github.io/random-quote-machine/)
+[The_live_link_of_this_project](https://lively-froyo-eed4af.netlify.app/)
 
 ## Technologies and Tools Used 🛠️
 
